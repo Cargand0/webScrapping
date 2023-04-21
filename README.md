@@ -18,7 +18,3 @@ This repository contains a basic implementation of web scraping using Python, wi
 
 The website used for this project is Elrah Exclusive e-commerce website:
 https://elrahexclusive.my/product-category/baju-melayu/magnificent-4-0/?products-per-page=all
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
