@@ -17,7 +17,7 @@ page_soup = soup(page_html,"html.parser")
 fileName = "Elrah(Magnificent 4.0).csv"
 f = open(fileName, "w")
 
-headers = "Product Name,Product Price,Product Availability\n"
+headers = "Product Name,Product Price,Category\n"
 f.write(headers)
 
 shoeContainers = page_soup.findAll("div",{"class":"product-inner clr"})
@@ -31,14 +31,14 @@ for container in shoeContainers:
     prod_price = price_container[0].find("bdi").text
     print("Product Price: " + prod_price)
 
-    ava_container = container.findAll("li", {"class":"category"})
-    stock = ava_container[0].find("a").text
+    cat_container = container.findAll("li", {"class":"category"})
+    category = cat_container[0].find("a").text
     
     print("Product Name: " + prod_name)
     print("Product Price: " + prod_price)
-    print("image: " + stock)
+    print("Category: " + category)
 
-    f.write(prod_name.replace(",","|") + "," + prod_price.replace(",",".") + "," + stock + "\n")
+    f.write(prod_name.replace(",","|") + "," + prod_price.replace(",",".") + "," + category + "\n")
 
 f.close()
 #test
