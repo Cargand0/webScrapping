@@ -41,3 +41,4 @@ for container in shoeContainers:
     f.write(prod_name.replace(",","|") + "," + prod_price.replace(",",".") + "," + stock + "\n")
 
 f.close()
+#test
